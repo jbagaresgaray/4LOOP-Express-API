@@ -8,4 +8,6 @@ module.exports = function(app,config, middleware) {
         .get(function onRequest(req, res) {
             res.render('index');
         });
+
+    
 };
