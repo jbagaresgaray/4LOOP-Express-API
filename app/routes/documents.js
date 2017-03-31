@@ -3,7 +3,7 @@
 var fs = require('fs-extra');
 
 module.exports = function(app, middleware) {
-    app.route('/docs')
+    app.route('/docx')
         .get(function onRequest(req, res) {
             var file = 'docs/api/index.html';
             fs.readFile(file, 'utf8', function(err, data) {
@@ -15,7 +15,7 @@ module.exports = function(app, middleware) {
             });
         });
 
-    app.route('/docs-v1')
+    app.route('/docx-v1')
         .get(function onRequest(req, res) {
             var file = 'docs/api/swagger.json';
             console.log('file: ', file);
