@@ -7,7 +7,7 @@ module.exports = {
     db_host: process.env.DB_HOST || 'localhost',
     db_user: process.env.DB_USER || 'root',
     db_password: process.env.DB_PASSWORD || '',
-    db_name: '',
+    db_name: 'mean_sample',
     db_port: 3306,
     port: 3000, // PLEASE DONT REMOVE 'process.env.PORT'
     ip: process.env.IP,

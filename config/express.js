@@ -11,7 +11,8 @@ var middleware = require('../app/utils/middleware');;
 var flash = require('connect-flash');
 
 module.exports = function(app, config) {
-
+    console.log('EXPRESS');
+    
     app.use('/public', express.static(__dirname + './../public'));
     app.use('/uploads', express.static(__dirname + './../public/uploads'));
     app.set('port', config.port || process.env.PORT || 5001);

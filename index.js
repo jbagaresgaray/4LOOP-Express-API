@@ -10,8 +10,11 @@ process.env.NODE_ENV = env;
 var application = require('./config/application'),
     express = require('express'),
     bunyan = require('bunyan'),
+    mysql = require('mysql'),
     middleware = require('./app/utils/middleware'),
     config = require('./config/environment/' + env),
+    Database = require('./app/utils/database').Database,
+    db = new Database(mysql, config),
     log = bunyan.createLogger({
         name: 'app_name_here'
     }),
@@ -25,9 +28,9 @@ var router = express.Router({
 });
 
 
-require(application.utils + 'helper')(app, log, config);
+require(application.utils + 'helper')(db, server, config, log);
 require(application.config + 'express')(app, config);
 // Routes
-require(application.routes + '/')(app,config, middleware);
+require(application.routes + '/')(app, config, middleware);
 
 module.exports = app;
