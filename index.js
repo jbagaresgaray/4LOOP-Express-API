@@ -31,6 +31,7 @@ var router = express.Router({
 require(application.utils + 'helper')(db, server, config, log);
 require(application.config + 'express')(app, config);
 // Routes
+require(application.routes + 'documents')(app, middleware);
 require(application.routes + '/')(app, config, middleware);
 
 module.exports = app;

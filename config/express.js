@@ -14,12 +14,13 @@ module.exports = function(app, config) {
     console.log('EXPRESS');
     
     app.use('/public', express.static(__dirname + './../public'));
+    app.use('/docs', express.static(__dirname + './../docs'));
     app.use('/uploads', express.static(__dirname + './../public/uploads'));
     app.set('port', config.port || process.env.PORT || 5001);
     app.set('ip', config.ip);
     app.set('env', config.env);
     app.set('config', config);
-    app.set('api_version', process.env.APP_VER || '/api/1.0');
+    app.set('api_version', process.env.APP_VER || config.api_version);
     app.set('view engine', 'ejs');
     app.set('views', 'app/views/');
     app.use(morgan('dev'));

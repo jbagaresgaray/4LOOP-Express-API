@@ -6,7 +6,6 @@ var mysql = require('mysql');
 var config = require('../../config/environment/' + env);
 
 var Database = function() {
-    console.log('Database')
     var self = this;
 
     self.configuration = {
@@ -21,7 +20,6 @@ var Database = function() {
     };
 
     self.connect = function onConnect(callback) {
-        console.log('configuration: ',self.configuration);
         var connection = mysql.createConnection(self.configuration);
         connection.connect(function(err) {
             if (err) {
