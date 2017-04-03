@@ -210,11 +210,11 @@ There are 2 types for Client side setup:
 	    ---- config                            # Contains main routing files  
     --- modules                                # Angular views and controllers
 	    ---- (feature)foldername
-		    ----- feature.html                 # Angular View
-			----- feature.modal.html           # Angular View
-		    ----- feature.config.js            # Contains routing files
-		    ----- controllers                  # Angular controllers
-			    ----- feature.controller.js
+		----- feature.html                 # Angular View
+		----- feature.modal.html           # Angular View
+		----- feature.config.js            # Contains routing files
+		----- controllers                  # Angular controllers
+			----- feature.controller.js
 		    
 
 ## Config
