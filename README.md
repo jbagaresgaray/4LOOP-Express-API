@@ -202,13 +202,13 @@ There are 2 types for Client side setup:
 2.)
 
 	public
-    --- assets        # CSS/Images (not aggregated)
+    --- assets                                 # CSS/Images (not aggregated)
     --- scripts      
-	    ---- services      # Angular services
-	    ---- directives    # Angular directives
-   	    ---- filters       # Angular filters
-	    ---- config        # Contains main routing files  
-    --- modules         # Angular views and controllers
+	    ---- services                          # Angular services
+	    ---- directives                        # Angular directives
+   	    ---- filters                           # Angular filters
+	    ---- config                            # Contains main routing files  
+    --- modules                                # Angular views and controllers
 	    ---- (feature)foldername
 		    ----- feature.html                 # Angular View
 			----- feature.modal.html           # Angular View
