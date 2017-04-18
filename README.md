@@ -170,7 +170,7 @@ All of the Server side code resides in the `/app` directory.
 
     app       
     --- controllers   # Server side logic goes here
-    --- models        # Database Schema Models
+    --- daos          # Database Active Objects (Database Queries logic goes here)
     --- routes        # Rest api endpoints for routing
     --- views         # Swig based html rendering
 
