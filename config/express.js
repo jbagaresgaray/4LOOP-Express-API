@@ -9,6 +9,7 @@ var cookieParser = require('cookie-parser');
 var methodOverride = require('method-override');
 var middleware = require('../app/utils/middleware');;
 var flash = require('connect-flash');
+var expressValidator = require('express-validator');
 
 module.exports = function(app, config) {    
     app.use('/public', express.static(__dirname + './../public'));
@@ -24,6 +25,7 @@ module.exports = function(app, config) {
     app.use(morgan('dev'));
     app.use(methodOverride());
     app.use(cookieParser());
+    app.use(expressValidator());
     app.use(bodyParser.json({
         type: 'application/json',
         limit: '50mb'
