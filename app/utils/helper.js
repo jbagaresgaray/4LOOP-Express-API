@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = function(database, server, config, log) {
-    console.log('HELPER');
     database.connect(function onConnect(err, isConnected) {
         if (!isConnected) {
             log.error('ENVIRONMENT: ' + config.env + ' Error Connecting To MYSQL database');

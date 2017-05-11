@@ -1,7 +1,7 @@
 'use strict';
 
 var mysql = require('mysql');
-var Database = require('../../../app/utils/database').Database;
+var Database = require('../../app/utils/database').Database;
 var db = new Database();
 
 

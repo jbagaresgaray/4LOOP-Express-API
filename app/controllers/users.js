@@ -1,6 +1,6 @@
 'use strict';
 
-var usersDao = require('../../daos/users');
+var usersDao = require('../daos/users');
 
 var async = require('async');
 
@@ -123,3 +123,5 @@ Users.prototype.updateUser = (user_id, data, next) => {
         });
     });
 };
+
+exports.Users = Users;

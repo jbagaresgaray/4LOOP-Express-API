@@ -10,9 +10,7 @@ var methodOverride = require('method-override');
 var middleware = require('../app/utils/middleware');;
 var flash = require('connect-flash');
 
-module.exports = function(app, config) {
-    console.log('EXPRESS');
-    
+module.exports = function(app, config) {    
     app.use('/public', express.static(__dirname + './../public'));
     app.use('/docs', express.static(__dirname + './../docs'));
     app.use('/uploads', express.static(__dirname + './../public/uploads'));

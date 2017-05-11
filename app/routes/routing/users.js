@@ -1,7 +1,7 @@
 'use strict';
 
-var cb = require('./../../../utils/callback');
-var usersCtrl = require('../../../controllers/users').Users;
+var cb = require('./../../utils/callback');
+var usersCtrl = require('../../controllers/users').Users;
 var users = new usersCtrl();
 
 exports.createUser = (req, res) => {
