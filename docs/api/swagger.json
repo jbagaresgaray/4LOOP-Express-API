@@ -23,31 +23,6 @@
                 ],
                 "description": "Get all list of Users",
                 "summary": "Returns list of all Users",
-                "parameters": [{
-                    "name": "Authorization",
-                    "in": "header",
-                    "description": "Auth Token",
-                    "required": false,
-                    "type": "string"
-                }, {
-                    "name": "type",
-                    "in": "query",
-                    "description": "'all','employee','customer'",
-                    "required": false,
-                    "type": "string"
-                }, {
-                    "name": "startWith",
-                    "in": "query",
-                    "description": "Pagination Starts (Number)",
-                    "required": false,
-                    "type": "number"
-                }, {
-                    "name": "limit",
-                    "in": "query",
-                    "description": "Pagination Limit (Number)",
-                    "required": false,
-                    "type": "number"
-                }],
                 "responses": {
                     "400": {
                         "description": "Bad Request - Request does not have a valid format, all required parameters, etc."
@@ -73,15 +48,9 @@
                 "tags": [
                     "Users"
                 ],
-                "description": "Create Person",
-                "summary": "Register or Create Person",
+                "description": "Create User",
+                "summary": "Register or Create User",
                 "parameters": [{
-                    "name": "Authorization",
-                    "in": "header",
-                    "description": "Auth Token",
-                    "required": false,
-                    "type": "string"
-                }, {
                     "name": "body",
                     "in": "body",
                     "description": "",
@@ -112,7 +81,7 @@
                 }
             }
         },
-        "/api/1.0/users/{id}": {
+        "/api/1.0/users/{user_id}": {
             "get": {
                 "tags": [
                     "Users"
@@ -120,13 +89,7 @@
                 "description": "Get User information",
                 "summary": "Returns information of an User",
                 "parameters": [{
-                    "name": "Authorization",
-                    "in": "header",
-                    "description": "Auth Token",
-                    "required": false,
-                    "type": "string"
-                }, {
-                    "name": "id",
+                    "name": "user_id",
                     "in": "path",
                     "description": "ID of User to update",
                     "required": true,
@@ -159,27 +122,15 @@
                     "Users"
                 ],
                 "description": "Update User Information",
-                "description": "Update Person Information by ID",
-                "parameters": [{
-                    "name": "Authorization",
-                    "in": "header",
-                    "description": "Auth Token",
-                    "required": false,
-                    "type": "string"
-                }, {
-                    "name": "id",
+                "summary": "Update User Information",
+                "parameters": [ {
+                    "name": "user_id",
                     "in": "path",
                     "description": "ID of User to update",
                     "required": true,
                     "type": "integer",
                     "format": "int64"
-                }, {
-                    "name": "person_img",
-                    "in": "formData",
-                    "description": "Image file to upload",
-                    "required": false,
-                    "type": "file"
-                }, {
+                },{
                     "name": "body",
                     "in": "body",
                     "description": "",
@@ -213,16 +164,10 @@
                 "tags": [
                     "Users"
                 ],
-                "description": "Delete Person Information",
-                "summary": "Delete Person By Id",
+                "description": "Delete User Information",
+                "summary": "Delete User By Id",
                 "parameters": [{
-                    "name": "Authorization",
-                    "in": "header",
-                    "description": "Auth Token",
-                    "required": false,
-                    "type": "string"
-                }, {
-                    "name": "id",
+                    "name": "user_id",
                     "in": "path",
                     "description": "",
                     "required": true,
@@ -256,16 +201,16 @@
     "definitions": {
         "createUser": {
             "properties": {
-                "name": {
+                "firstname": {
                     "type": "string"
                 },
-                "contact_person": {
+                "lastname": {
                     "type": "string"
                 },
-                "contact_number": {
+                "username": {
                     "type": "string"
                 },
-                "address": {
+                "password": {
                     "type": "string"
                 }
             }
